@@ -12,7 +12,7 @@
       "type": "git",
       "dir": null,
       "ref": "9.3.2",
-      "url": "https://github.com/MobilePorting/openfl"
+      "url": "https://github.com/openfl/openfl/tree/9.3.2"
     },
     {
       "name": "flixel",
