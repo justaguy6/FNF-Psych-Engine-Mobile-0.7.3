@@ -87,6 +87,11 @@
       "name": "format",
       "type": "haxelib",
       "version": "3.5.0"
+    },
+    {
+      "name": "hxp",
+      "type": "haxelib",
+      "version": "1.2.1"
     }
   ]
 }
