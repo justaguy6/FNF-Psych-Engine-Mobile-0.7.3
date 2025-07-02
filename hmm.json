@@ -68,6 +68,7 @@
       "dir": null,
       "ref": "main",
       "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
+    },
     {
       "name": "linc_luajit",
       "type": "git",
