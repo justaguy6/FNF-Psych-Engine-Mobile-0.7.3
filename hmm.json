@@ -54,7 +54,7 @@
       "name": "SScript",
       "type": "git",
       "dir": null,
-      "ref": "master",
+      "ref": "main",
       "url": "https://github.com/raphaffzyz/SScript-7.7.0-PE"
     },
     {
@@ -86,7 +86,7 @@
     {
       "name": "format",
       "type": "haxelib",
-      "version": "3.5.0",
+      "version": "3.5.0"
     }
   ]
 }
