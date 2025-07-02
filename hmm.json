@@ -82,6 +82,11 @@
       "dir": null,
       "ref": "dev",
       "url": "https://github.com/ShadowMario/flxanimate.git"
+    },
+    {
+      "name": "format",
+      "type": "haxelib",
+      "version": "3.5.0",
     }
   ]
 }
