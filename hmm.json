@@ -11,15 +11,15 @@
       "name": "openfl",
       "type": "git",
       "dir": null,
-      "ref": "v9.3.2",
+      "ref": "develop",
       "url": "https://github.com/openfl/openfl"
     },
     {
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": "5.5.0",
-      "url": "https://github.com/MobilePorting/flixel"
+      "ref": "dev",
+      "url": "https://github.com/HaxeFlixel/flixel"
     },
     {
       "name": "flixel-addons",
@@ -41,14 +41,14 @@
       "type": "git",
       "dir": null,
       "ref": "master",
-      "url": "https://github.com/MobilePorting/hxcpp"
+      "url": "https://github.com/HaxeFoundation/hxcpp"
     },
     {
       "name": "hxCodec",
       "type": "git",
       "dir": null,
       "ref": "main",
-      "url": "https://github.com/MobilePorting/hxCodec"
+      "url": "https://github.com/polybiusproxy/hxCodec"
     },
     {
       "name": "SScript",
