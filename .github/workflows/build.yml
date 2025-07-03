@@ -58,7 +58,8 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
-        run: haxelib run lime build ${{ inputs.buildArgs }}
+        run: |
+          echo "N" | haxelib run lime build ${{ inputs.buildArgs }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
