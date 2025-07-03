@@ -12,7 +12,7 @@ on:
       buildArgs:
         required: true
         type: string
-      artifactName:
+      artifactName: 
         required: true
         type: string
       artifactPath:
@@ -64,11 +64,11 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
 
       - name: Setup SScript (First Run)
-        run: echo "N" | haxelib run lime build ${{ inputs.buildArgs }}
+        run: echo "N" | haxelib run lime build ${{ inputs.buildArgs }} --clean
         continue-on-error: true
 
       - name: Compile Project (Second Run)
-        run: haxelib run lime build ${{ inputs.buildArgs }}
+        run: haxelib run lime build ${{ inputs.buildArgs }} --clean
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
