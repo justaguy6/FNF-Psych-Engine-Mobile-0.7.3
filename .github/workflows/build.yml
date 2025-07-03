@@ -33,8 +33,9 @@ jobs:
         with:
           submodules: true
 
-      - name: List Files After Checkout
-        run: ls -R
+      - name: Initialize and Update Submodules
+        run: |
+          git submodule update --init --recursive
 
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
