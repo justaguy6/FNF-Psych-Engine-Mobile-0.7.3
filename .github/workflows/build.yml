@@ -68,7 +68,7 @@ jobs:
         continue-on-error: true
 
       - name: Compile Project (Second Run)
-        run: haxelib run lime build ${{ inputs.buildArgs }}
+        run: haxelib run lime build ${{ inputs.buildArgs }} -source source/flixel -source source/lime -source source/openfl
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
