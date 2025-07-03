@@ -33,6 +33,9 @@ jobs:
         with:
           submodules: true
 
+      - name: List Files After Checkout
+        run: ls -R
+
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
         with:
