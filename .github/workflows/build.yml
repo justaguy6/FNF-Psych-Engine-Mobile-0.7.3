@@ -59,10 +59,12 @@ jobs:
           haxelib run lime config JAVA_HOME $JAVA_HOME_17_X64
           haxelib run lime config ANDROID_SETUP true
 
-      - name: Compile
-        run: |
-          echo "N" | haxelib run lime build ${{ inputs.buildArgs }} || true
-          haxelib run lime build ${{ inputs.buildArgs }}
+      - name: Setup SScript (First Run)
+        run: echo "N" | haxelib run lime build ${{ inputs.buildArgs }}
+        continue-on-error: true
+
+      - name: Compile Project (Second Run)
+        run: haxelib run lime build ${{ inputs.buildArgs }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@main
