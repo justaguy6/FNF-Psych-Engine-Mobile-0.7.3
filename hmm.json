@@ -1,87 +1,54 @@
 {
   "dependencies": [
     {
-      "name": "lime",
-      "type": "git",
-      "dir": null,
-      "ref": "develop",
-      "url": "https://github.com/openfl/lime"
+      "name": "openfl",
+      "type": "haxelib",
+      "version": "9.1.0"
     },
     {
-      "name": "openfl",
-      "type": "git",
-      "dir": null,
-      "ref": "develop",
-      "url": "https://github.com/openfl/openfl"
+      "name": "lime",
+      "type": "haxelib",
+      "version": "7.9.0"
     },
     {
       "name": "flixel",
-      "type": "git",
-      "dir": null,
-      "ref": "dev",
-      "url": "https://github.com/HaxeFlixel/flixel"
+      "type": "haxelib",
+      "version": "4.11.0"
     },
     {
       "name": "flixel-addons",
       "type": "haxelib",
-      "version": "3.2.1"
-    },
-    {
-      "name": "flixel-tools",
-      "type": "haxelib",
-      "version": "1.5.1"
+      "version": "2.11.0"
     },
     {
       "name": "flixel-ui",
       "type": "haxelib",
-      "version": "2.5.0"
+      "version": "2.3.3"
     },
     {
       "name": "hxcpp",
-      "type": "git",
-      "dir": null,
-      "ref": "master",
-      "url": "https://github.com/HaxeFoundation/hxcpp"
+      "type": "haxelib",
+      "version": "4.2.1"
     },
     {
-      "name": "hxCodec",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/polybiusproxy/hxCodec"
+      "name": "hxjsonast",
+      "type": "haxelib",
+      "version": "1.0.1"
     },
     {
-      "name": "SScript",
-      "type": "git",
-      "dir": null,
-      "ref": "master",
-      "url": "https://github.com/raphaffzyz/SScript-7.7.0-PE"
+      "name": "hscript",
+      "type": "haxelib",
+      "version": "2.4.0"
+    },
+    {
+      "name": "hscript-ex",
+      "type": "haxelib",
+      "version": "1.0.0"
     },
     {
       "name": "tjson",
       "type": "haxelib",
       "version": "1.4.0"
-    },
-    {
-      "name": "hxdiscord_rpc",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
-    },
-    {
-      "name": "linc_luajit",
-      "type": "git",
-      "dir": null,
-      "ref": "master",
-      "url": "https://github.com/AndreiRudenko/linc_luajit"
-    },
-    {
-      "name": "flxanimate",
-      "type": "git",
-      "dir": null,
-      "ref": "dev",
-      "url": "https://github.com/ShadowMario/flxanimate.git"
     },
     {
       "name": "format",
@@ -91,7 +58,37 @@
     {
       "name": "hxp",
       "type": "haxelib",
-      "version": "1.2.1"
+      "version": "latest"
+    },
+    {
+      "name": "hxCodec",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/polybiusproxy/hxCodec"
+    },
+    {
+      "name": "SScript",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/raphaffzyz/SScript-7.7.0-PE"
+    },
+    {
+      "name": "hxdiscord_rpc",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
+    },
+    {
+      "name": "linc_luajit",
+      "type": "git",
+      "ref": "master",
+      "url": "https://github.com/AndreiRudenko/linc_luajit"
+    },
+    {
+      "name": "flxanimate",
+      "type": "git",
+      "ref": "dev",
+      "url": "https://github.com/ShadowMario/flxanimate.git"
     }
   ]
 }
