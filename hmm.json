@@ -42,8 +42,9 @@
     },
     {
       "name": "hscript-ex",
-      "type": "haxelib",
-      "version": "1.0.0"
+      "type": "git",
+      "ref": "master"
+      "url": "https://github.com/ianharrigan/hscript-ex"
     },
     {
       "name": "tjson",
