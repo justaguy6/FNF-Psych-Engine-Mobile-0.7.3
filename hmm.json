@@ -43,7 +43,7 @@
     {
       "name": "hscript-ex",
       "type": "git",
-      "ref": "master"
+      "ref": "master",
       "url": "https://github.com/ianharrigan/hscript-ex"
     },
     {
