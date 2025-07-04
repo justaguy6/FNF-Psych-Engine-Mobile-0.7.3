@@ -51,7 +51,7 @@ jobs:
           path: export/release/android/bin/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
