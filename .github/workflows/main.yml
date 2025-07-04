@@ -1,22 +1,80 @@
-name: Main
+name: Build
 
-on: workflow_dispatch
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+      os:
+        required: true
+        type: string
+      buildArgs:
+        required: true
+        type: string
+      artifactName: 
+        required: true
+        type: string
+      artifactPath:
+        required: true
+        type: string
+
+env:
+  HAXE_VERSION: 4.3.6
+  PROJECT_NAME: PsychEngine
 
 jobs:
-  Build:
-    name: ${{ matrix.name }}
-    strategy:
-      matrix:
-        include:
-          - name: Android
-            os: ubuntu-24.04
-            buildArgs: "android -ONLY_ARMV7"
-            artifactName: androidBuild
-            artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
-    uses: ./.github/workflows/build.yml
-    with:
-        name: ${{ matrix.name }}
-        os: ${{ matrix.os }}
-        buildArgs: ${{ matrix.buildArgs }}
-        artifactName: ${{ matrix.artifactName }}
-        artifactPath: ${{ matrix.artifactPath }}
+  build:
+    name: Build
+    runs-on: ${{ inputs.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          submodules: true
+
+      - name: Initialize and Update Submodules
+        run: |
+          git submodule update --init --recursive
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: ${{ env.HAXE_VERSION }}
+
+      - name: Setup Android NDK
+        id: setup-ndk
+        uses: nttld/setup-ndk@main
+        with:
+          ndk-version: r25c
+          add-to-path: false
+
+      - name: Install Libraries
+        run: |
+          haxelib install hmm --quiet
+          haxelib run hmm install --quiet
+
+      - name: Configure Android
+        env:
+          ANDROID_NDK_ROOT: ${{ steps.setup-ndk.outputs.ndk-path }}
+        run: |
+          haxelib run lime config ANDROID_SDK $ANDROID_HOME
+          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_ROOT
+          haxelib run lime config JAVA_HOME $JAVA_HOME_17_X64
+          haxelib run lime config ANDROID_SETUP true
+      - name: Clean Project
+        run: haxelib run lime clean ${{ inputs.buildArgs }}
+
+      - name: Setup SScript (First Run)
+        run: echo "N" | haxelib run lime build ${{ inputs.buildArgs }}
+        continue-on-error: true
+
+      - name: Compile Project (Second Run)
+        run: haxelib run lime build ${{ inputs.buildArgs }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ inputs.artifactName }}
+          path: ${{ inputs.artifactPath }}
+          if-no-files-found: error
