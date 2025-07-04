@@ -68,6 +68,13 @@
       "ref": "main",
       "url": "https://github.com/polybiusproxy/hxCodec"
     },
+      {
+      "name": "extension-androidtools",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/extension-androidtools"
+    },
     {
       "name": "SScript",
       "type": "git",
