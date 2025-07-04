@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin
+        <app title="Friday Night Funkin': Psych Engine 0.7.3" />
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
 	<haxedef name="LINC_LUA_RELATIVE_DYNAMIC_LIB"/> <!-- stable luas PUT AFTER FIRST LINE WITH APP NAME AND ETC -->
 	<app preloader="flixel.system.FlxPreloader" />
